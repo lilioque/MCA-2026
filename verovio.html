@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Version 1.0 -->
+    <!-- Version 2.0 -->
 <head>
     <meta charset="utf-8">
     <title>My Piece in Verovio</title>
@@ -26,7 +26,9 @@
 <body>
     <div class="box">
     <div class="header"><h1>Week 3</h1>
-        <p>[Insert your response to task 2 here.]</p>
+        <p><b>Task 2:</b> <em>Compare 3 XML elements in the MusicXML file to the corresponding ones in MEI. ... Think about: which attributes can be employed in each standard, which parents and children can be used, and try to think of the implications of these differences.</em></p>
+        <p>Element 1: metadata about the music piece (title, author, etc.)</p>
+        <p>Information about the piece title, composer, and part name is clearly labelled in the *.musicxml file through the use of the child elements of the element <credit> (<credit-type>title</credit-type>, <credit-type>composer</credit-type>, etc.), but in .mei they are just <rend> elements with the parent element <pgHead>. This is quite surprising, since the MEI standard is supposed to be more academic and research-oriented, but such basic information has been left unclassified. Moreover, the score that I digitized had name of the composer given in two languages, and the second line, containing the name in Latin script, went into another element, <pgFoot>, and is not visible on the page rendered by Verovio.</p>
     </div>
     <div id="app">Verovio is loading...</div>
     <script type="module">
