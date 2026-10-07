@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Version 2.3 -->
+    <!-- Version 3.4 -->
 <head>
     <meta charset="utf-8">
     <title>My Piece in Verovio</title>
@@ -27,8 +27,9 @@
     <div class="box">
     <div class="header"><h1>Week 3</h1>
         <p><b>Task 2:</b> <em>Compare 3 XML elements in the MusicXML file to the corresponding ones in MEI. ... Think about: which attributes can be employed in each standard, which parents and children can be used, and try to think of the implications of these differences.</em></p>
-        <p>Element 1: metadata about the music piece (title, author, etc.)</p>
-        <p>Information about the piece title, composer, and part name is clearly labelled in the *.musicxml file through the use of the child elements of the element <code>&lt;credit&gt;</code> (<code>&lt;credit-type&gt;title&lt;/credit-type&gt;</code>, <code>&lt;credit-type&gt;composer&lt;/credit-type&gt;</code>, etc.), but in .mei they are just <code>&lt;rend&gt;</code> elements with the parent element <code>&lt;pgHead&gt;</code>. This is quite surprising, since the MEI standard is supposed to be more academic and research-oriented, but such basic information has been left unclassified. Moreover, the score that I digitized had name of the composer given in two languages, and the second line, containing the name in Latin script, went into another element, <code>&lt;pgFoot&gt;</code>, and is not visible on the page rendered by Verovio.</p>
+        <p><b>Element 1: metadata about the music piece (title, author, etc.)</b></p>
+        <p>Information about the piece title, composer, and part name is clearly labelled in the *.musicxml file through the use of the child elements of the element <code>&lt;credit&gt;</code> (<code>&lt;credit-type&gt;title&lt;/credit-type&gt;</code>, <code>&lt;credit-type&gt;composer&lt;/credit-type&gt;</code>, etc.), but in .mei they are just <code>&lt;rend&gt;</code> elements with the parent element <code>&lt;pgHead&gt;</code>. This is quite surprising, since the MEI standard is supposed to be more academic and research-oriented, but such basic information has been left unclassified. Moreover, the score that I digitised had name of the composer given in two languages, and the second line, containing the name in Latin script, went into another element, <code>&lt;pgFoot&gt;</code>, and is not visible on the page rendered by Verovio. That also means that this metadata cannot be properly parsed from the *.mei file.</p>
+        <p><b>Element 2: </b></p>
     </div>
     <div id="app">Verovio is loading...</div>
     <script type="module">
