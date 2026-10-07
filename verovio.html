@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Version 5.0 -->
+    <!-- Version 6.0 -->
 <head>
     <meta charset="utf-8">
     <title>My Piece in Verovio</title>
@@ -30,10 +30,20 @@
         <p><b>Task 2:</b> <em>Compare 3 XML elements in the MusicXML file to the corresponding ones in MEI. ... Think about: which attributes can be employed in each standard, which parents and children can be used, and try to think of the implications of these differences.</em></p>
         <p><b>Element 1: metadata about the music piece (title, author, etc.)</b></p>
         <p>Information about the piece title, composer, and part name is clearly labelled in the *.musicxml file through the use of the child elements of the element <code>&lt;credit&gt;</code> (<code>&lt;credit-type&gt;title&lt;/credit-type&gt;</code>, <code>&lt;credit-type&gt;composer&lt;/credit-type&gt;</code>, etc.), but in .mei they are just <code>&lt;rend&gt;</code> elements with the parent element <code>&lt;pgHead&gt;</code>. This is quite surprising, since the MEI standard is supposed to be more academic and research-oriented, but such basic information has been left unclassified. Moreover, the score that I digitised had the name of the composer given in two languages, and the second line, containing the name in Latin script, went into another element, <code>&lt;pgFoot&gt;</code>, and is not visible on the page rendered by Verovio. That also means that this metadata cannot be properly parsed from the *.mei file.</p>
+        <p><img src="images/musicxml_credits.png" width="400" /></p>
+        <p>Credits in *.musicxml</p>
+        <p><img src="images/mei_credits.png" width="400" /></p>
+        <p>Credits in *.mei</p>
         <p><b>Element 2: Parts definition</b></p>
         <p>Information about vocal parts and instruments presented in the score is encoded differently in these two standards. I will compare how the 'Soprano' voice is encoded in both of them.</p>
         <p>*.musicxml has a dedicated element <code>&lt;part-list>&gt;</code> the child <code>&lt;score-part id="P1"&gt;</code> of which contains nested elements related to Soprano (<code>&lt;instrument-name&gt;</code>, <code>&lt;instrument-sound&gt;</code> + info about MIDI realisation of this voice). *.mei encodes this information through the <code>&lt;staffDef&gt;</code> element, which has nested elements <code>&lt;label&gt;</code> (Soprano) as well as other important music data related to that part - clef, key signature and time signature (<code>&lt;clef&gt;</code>, <code>&lt;keySig&gt;</code>, and <code>&lt;meterSig&gt;</code>, respectively). *.musicxml holds this information in a separate element <code>&lt;part id="P1"&gt;</code> (which corresponds to <code>id="P1"</code> of a <code>&lt;score-part&gt;</code> element), among whose children are <code>&lt;key&gt;</code>, <code>&lt;time&gt;</code>, and <code>&lt;clef&gt;</code>.</p>
         <p>On the one hand, having this information inside one element, as in MEI, is convenient - this option is more human-readable. On the other hand, <em>O Fortuna</em> is a great example where clefs and time signatures change after the first few bars, so that is not some constant characteristic of a voice/instrument and there is its own logic of having that next to the relevant notes, not in the initial description of voices/instruments. </p>
+        <p><img src="images/musicxml_part_definition.png" width="400" /></p>
+        <p>Part definition in *.musicxml</p>
+        <p><img src="images/mei_part_definition.png" width="400" /></p>
+        <p>Part definition in *.mei</p>
+        <p><img src="images/musicxml_part_clef_key_time.png" width="400" /></p>
+        <p>Information about clef, key signature and time signature in *.musicxml</p>
     </div>
     <div id="app">Verovio is loading...</div>
     <script type="module">
