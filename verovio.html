@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Version 7.0 -->
+    <!-- Version 8.0 -->
 <head>
     <meta charset="utf-8">
     <title>My Piece in Verovio</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
     <style>
     html, body {
         width: 100%;
@@ -26,12 +28,15 @@
 <body>
     <div class="box">
     <div class="header">
-        <p align="left"><a href="week2.html">&lt;&lt; Week 2</a></p>
-        <h1>Week 3. XML encoding for music notation.</h1>
-        <p><b>Note on Verovio/MEI results:</b> Maybe due to the amount of extra information around the bars, the Verovio rendering of the score looks very clumsy and not at all as neat as it looked in MuseScore. That shows that even open standards do not guarantee full compatibility of everything with everything!</p>
-        <p><b>Note on the reflective task:</b> When my response to the reflective task got too long, the Verovio player collapsed. As the simplest troubleshooting option, I moved the reflection to a separate page.</p>
-
-        <p align="right"><a href="week3.html">Week 3 (Reflection) &gt;&gt;</a></p>
+        <div class="container">
+            <p align="left"><a href="week2.html">&lt;&lt; Week 2</a></p>
+            <h1>Week 3. XML encoding for music notation.</h1>
+            <p><b>Note on Verovio/MEI results:</b> Maybe due to the amount of extra information around the bars, the Verovio rendering of the score looks very clumsy and not at all as neat as it looked in MuseScore. That shows that even open standards do not guarantee full compatibility of everything with everything!</p>
+            <p><b>Note on the reflective task:</b> When my response to the reflective task got too long, the Verovio player collapsed. As the simplest troubleshooting option, I moved the reflection to a separate page.</p>
+    
+            <p align="right"><a href="week3.html">Week 3 (Reflection) &gt;&gt;</a></p>
+      
+        </div>
     </div>
     <div id="app">Verovio is loading...</div>
     <script type="module">
@@ -58,6 +63,7 @@
                 app.loadData(text);
             });
     </script>
+    <script type="module" src="js/bootstrap.bundle.min.js"></script>
     </div>
 </body>
 </html>
