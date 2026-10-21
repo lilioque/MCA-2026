@@ -1,5 +1,5 @@
 <html>
-<!--Version 1.1 -->
+<!--Version 2.0 -->
   <head>
     <title>Carmina Burana by Carl Orff, Week 5</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -16,37 +16,33 @@
 
           <blockquote>Create a metadata schema of at least 5 elements, including title, artist, publisher, and at least two others of your choice. </blockquote>
 
-      <p><b>Title</b> is defined in the Title Statement</p>
+      <p><b>Title</b> is defined in the Title Statement.</p>
 
-      <p>
+      <figure class="figure">
+        <img src="images/mei_titleStmt.png" class="img-fluid rounded-3" alt="titleStmt example in MEI Guidelines">
+        <figcaption class="figure-caption">titleStmt example in MEI Guidelines <a href="https://music-encoding.org/guidelines/v5/content/metadata.html" target="_blank">https://music-encoding.org/guidelines/v5/content/metadata.html</a></figcaption>
+      </figure>
 
-artist -> composer
-The name of the creator of the intellectual content of a musical work.
+      <p>I chose <b>composer</b> in place of 'artist'. MEI defines this field as 'The name of the creator of the intellectual content of a musical work.' It can be defined:</p>
+      <ul>
+        <li>inside the Title Statement section (3.3.1)</li>
+        <li>inside the Work Description section (3.6) 'The identifier and title values recorded here may or may not be the same as those assigned to published versions of the work. Fuller details are available in section 3.3.1 Title Statement.'</li>
+        <li>as a responsibility attribution (<code>&lt;persName&gt;</code>, allows adding extra information like the dates of birth and death)</li>
+      </ul>
 
-<composer>
-- inside the Title Statement section (3.3.1)
-- inside the Work Description section (3.6) 'The identifier and title values recorded here may or may not be the same as those assigned to published versions of the work. Fuller details are available in section 3.3.1 Title Statement.'
-- as a responsibility attribution (<persName>, allows to add an extra information like the dates of birth and death)
+      <p><b>Publisher</b> can be defined:</p>
 
-publisher
-- inside Responsibility Statement 
-- inside <pubStmt>
+      <ul>
+        <li>inside Responsibility Statement </li>
+        <li>inside <code>&lt;pubStmt;</code></li>
+      </ul>
 
-<langUsage>
-langUsage
-Groups elements describing the languages, sub-languages, dialects, etc., represented within the encoded resource.
-language
-Description of a language used in the document.
+      <p>For the fourth element I chose <b>language</b>. Since my dataset's theme is reuse of previously existing music, I decided that information about language/languages might be important information both for researchers and for composers.</p>
+      <p>In MEI, languages are defined within the <code>&lt;langUsage&gt;</code> element.</p>
 
+      <p>The same motivation lies behind my choice of <b>performance medium</b> as a fifth element. This element allows listing instruments/voices needed to perform the piece: 'The perfMedium element provides the possibility of describing a work in terms of its medium of performance; that is, the performing forces required. In the case of a dramatic work, the dramatis personae and associated voice qualities may be enumerated using castList. The perfResList element describes the necessary instrumental and vocal resources.'</p>
 
-<perfResList>
-Several instrumental or vocal resources treated as a group.
-'The perfMedium element provides the possibility of describing a work in terms of its medium of performance; that is, the performing forces required. In the case of a dramatic work, the dramatis personae and associated voice qualities may be enumerated using castList. The perfResList element describes the necessary instrumental and vocal resources.'
-
-
-        
-      </p>
-
+      
 
 
         <h2>2. Modifying the MEI document</h2>
