@@ -1,5 +1,5 @@
 <html>
-<!--Version 2.0 -->
+<!--Version 3.0 -->
   <head>
     <title>Carmina Burana by Carl Orff, Week 5</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -30,6 +30,16 @@
         <li>as a responsibility attribution (<code>&lt;persName&gt;</code>, allows adding extra information like the dates of birth and death)</li>
       </ul>
 
+      <figure class="figure">
+        <img src="images/mei_composer_titleStmt.png" class="img-fluid rounded-3" alt="composer in titleStmt example in MEI Guidelines">
+        <figcaption class="figure-caption">Composer defined within titleStmt example in MEI Guidelines <a href="https://music-encoding.org/guidelines/v5/content/metadata.html" target="_blank">https://music-encoding.org/guidelines/v5/content/metadata.html</a></figcaption>
+      </figure>
+
+      <figure class="figure">
+        <img src="images/mei_composer_respStmt.png" class="img-fluid rounded-3" alt="composer in respStmt example in MEI Guidelines">
+        <figcaption class="figure-caption">Composer defined within respStmt example in MEI Guidelines <a href="https://music-encoding.org/guidelines/v5/content/metadata.html" target="_blank">https://music-encoding.org/guidelines/v5/content/metadata.html</a></figcaption>
+      </figure>
+
       <p><b>Publisher</b> can be defined:</p>
 
       <ul>
@@ -37,12 +47,35 @@
         <li>inside <code>&lt;pubStmt;</code></li>
       </ul>
 
+      <figure class="figure">
+        <img src="images/mei_publisher_respStmt.png" class="img-fluid rounded-3" alt="publisher in respStmt example in MEI Guidelines">
+        <figcaption class="figure-caption">Publisher defined within respStmt example in MEI Guidelines <a href="https://music-encoding.org/guidelines/v5/content/metadata.html" target="_blank">https://music-encoding.org/guidelines/v5/content/metadata.html</a></figcaption>
+      </figure>
+
+       <figure class="figure">
+        <img src="images/mei_publisher_pubStmt.png" class="img-fluid rounded-3" alt="publisher in pubStmt example in MEI Guidelines">
+        <figcaption class="figure-caption">Publisher defined within pubStmt example in MEI Guidelines <a href="https://music-encoding.org/guidelines/v5/content/metadata.html" target="_blank">https://music-encoding.org/guidelines/v5/content/metadata.html</a></figcaption>
+      </figure>
+
       <p>For the fourth element I chose <b>language</b>. Since my dataset's theme is reuse of previously existing music, I decided that information about language/languages might be important information both for researchers and for composers.</p>
       <p>In MEI, languages are defined within the <code>&lt;langUsage&gt;</code> element.</p>
 
+      <figure class="figure">
+        <img src="images/mei_langUsage.png" class="img-fluid rounded-3" alt="langUsage example in MEI Guidelines">
+        <figcaption class="figure-caption">Languages defined within langUsage example in MEI Guidelines <a href="https://music-encoding.org/guidelines/v5/content/metadata.html" target="_blank">https://music-encoding.org/guidelines/v5/content/metadata.html</a></figcaption>
+      </figure>
+
       <p>The same motivation lies behind my choice of <b>performance medium</b> as a fifth element. This element allows listing instruments/voices needed to perform the piece: 'The perfMedium element provides the possibility of describing a work in terms of its medium of performance; that is, the performing forces required. In the case of a dramatic work, the dramatis personae and associated voice qualities may be enumerated using castList. The perfResList element describes the necessary instrumental and vocal resources.'</p>
 
+      <figure class="figure">
+        <img src="images/mei_perfResList_perfMedium.png" class="img-fluid rounded-3" alt="Performance medium example in MEI Guidelines">
+        <figcaption class="figure-caption">Performance medium example in MEI Guidelines <a href="https://music-encoding.org/guidelines/v5/content/metadata.html" target="_blank">https://music-encoding.org/guidelines/v5/content/metadata.html</a></figcaption>
+      </figure>
       
+      <figure class="figure">
+        <img src="images/mei_perfResList_choir.png" class="img-fluid rounded-3" alt="Performance medium example for choir parts in MEI Guidelines">
+        <figcaption class="figure-caption">Performance medium example for choir parts in MEI Guidelines <a href="https://music-encoding.org/guidelines/v5/content/metadata.html" target="_blank">https://music-encoding.org/guidelines/v5/content/metadata.html</a></figcaption>
+      </figure>
 
 
         <h2>2. Modifying the MEI document</h2>
