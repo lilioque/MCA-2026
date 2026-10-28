@@ -1,5 +1,5 @@
 <html>
-<!--Version 5.1 -->
+<!--Version 6.0 -->
   <head>
     <title>Carmina Burana by Carl Orff, Week 4</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -21,73 +21,130 @@
       <div class="mt-12">
           <h2>jSymbolic results:</h2>
       </div>
-          <p>Range:	72 <br>
-            <em><small>(Difference in semitones between the highest and lowest pitches.)</small></em><br>
-          Mean_Pitch:	61 <br>
-            <em><small>(Mean MIDI pitch value, averaged across all pitched notes in the piece. Set to 0 if there are no pitched notes. [60 = middle C])</small></em><br>
-          Most_Common_Pitch:	65 <br>
-            <em><small>(MIDI pitch value of the most frequently occuring pitch. [60 = middle C])</small></em><br>
-          Most_Common_Pitch_Class:	2 <br>
-            <em><small>(The pitch class that occurs most frequently compared to other pitch classes. A value of 0 corresponds to C, and pitches increase chromatically by semitone in integer untis (e.g. a value of 2 would mean that D is the most common pitch class). Enharmonic equivalents are treated as a single pitch class.)</small></em><br>
-          Pitch_Variability:	15.55 <br>
-            <em><small>(Standard deviation of the MIDI pitches of all pitched notes in the piece. Provides a measure of how close the pitches as a whole are to the mean pitch.)</small></em><br>
-          Pitch_Class_Variability:	3.038 <br>
-            <em><small>(Standard deviation of the pitch classes (where 0 corresponds to C, 1 to C#/Db, etc.) of all pitched notes in the piece. Provides a measure of how close the pitch classes as a whole are to the mean pitch class.)</small></em><br>
-          Last_Pitch:	52 <br>
-            <em><small>(The MIDI pitch value of the last note in the piece. If there are multiple notes with simultaneous attacks at the end of the piece, then the one with the lowest pitch is selected. Set to 0 if there are no pitched notes.)</small></em><br>
-          Most_Common_Rhythmic_Value: 2 <br>
-            <em><small>(The most common rhythmic value of the music, in quarter note units. So, for example, a Most Common Rhythmic Value of 0.5 would mean that eighth notes occur more frequently than any other rhythmic value. This calculation includes both pitched and unpitched notes, is calculated after rhythmic quantization, is not influenced by tempo, and is calculated without regard to the dynamics, voice or instrument of any given note.)</small></em></p>
-          
-          <p>Describe any additional insights this data is providing you about your piece:</p>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">JSymbolic result</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Range:	72</th>
+            <td><em><small>(Difference in semitones between the highest and lowest pitches.)</small></em></td>
+          </tr>
+          <tr>
+            <th scope="row">Mean_Pitch:	61</th>
+            <td><em><small>(Mean MIDI pitch value, averaged across all pitched notes in the piece. Set to 0 if there are no pitched notes. [60 = middle C])</small></em></td>
+          </tr>
+          <tr>
+            <th scope="row">Most_Common_Pitch:	65</th>
+            <td><em><small>(MIDI pitch value of the most frequently occuring pitch. [60 = middle C])</small></em></td>
+          </tr>
+          <tr>
+            <th scope="row">Most_Common_Pitch_Class:	2</th>
+            <td><em><small>(The pitch class that occurs most frequently compared to other pitch classes. A value of 0 corresponds to C, and pitches increase chromatically by semitone in integer untis (e.g. a value of 2 would mean that D is the most common pitch class). Enharmonic equivalents are treated as a single pitch class.)</small></em></td>
+          </tr>
+          <tr>
+            <th scope="row">Pitch_Variability:	15.55</th>
+            <td><em><small>(Standard deviation of the MIDI pitches of all pitched notes in the piece. Provides a measure of how close the pitches as a whole are to the mean pitch.)</small></em></td>
+          </tr>
+          <tr>
+            <th scope="row">Pitch_Class_Variability:	3.038</th>
+            <td><em><small>(Standard deviation of the pitch classes (where 0 corresponds to C, 1 to C#/Db, etc.) of all pitched notes in the piece. Provides a measure of how close the pitch classes as a whole are to the mean pitch class.)</small></em></td>
+          </tr>
+          <tr>
+            <th scope="row">Last_Pitch:	52</th>
+            <td><em><small>(The MIDI pitch value of the last note in the piece. If there are multiple notes with simultaneous attacks at the end of the piece, then the one with the lowest pitch is selected. Set to 0 if there are no pitched notes.)</small></em></td>
+          </tr>
+          <tr>
+            <th scope="row">Most_Common_Rhythmic_Value: 2</th>
+            <td><em><small>(The most common rhythmic value of the music, in quarter note units. So, for example, a Most Common Rhythmic Value of 0.5 would mean that eighth notes occur more frequently than any other rhythmic value. This calculation includes both pitched and unpitched notes, is calculated after rhythmic quantization, is not influenced by tempo, and is calculated without regard to the dynamics, voice or instrument of any given note.)</small></em></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <blockquote class="blockquote">
+        <p>Describe any additional insights this data is providing you about your piece:</p>
+      </blockquote>
+
       
       <div class="mt-12">
         <h3>jSymbolic statistics by vocal parts:</h3>
       </div>
-          <img src="images/o_fortuna_jsymbolic_by_parts.png" width="900" />
+
+      <figure class="figure mt-8">
+        <img src="images/o_fortuna_jsymbolic_by_parts.png" class="img-fluid rounded-3" width="900" alt="jSymbolic statistics by vocal parts">
+        <figcaption class="figure-caption"></figcaption>
+      </figure>
       
           
       <div class="mt-12">    
         <h2>music21 results:</h2>
       </div>
           
-      <div class="mt-12">    
+      <div class="mt-8">    
         <h3>Piano Rolls</h3>
       </div>
-          <p>To identify how parts in music21 p.parts correspond to the parts in my piece of music (i.e. in the MusicXML file), I had to consult with Copilot (documented at the bottom of this page).</p>
-          <p><b>Vocal parts:</b></p>
-          <p><img src="images/piano_roll_0_soprano.png" width="800" /><br>
-          Piano roll for Soprano
-          </p>
-          <p><img src="images/piano_roll_1_alto.png" width="800" /><br>
-          Piano roll for Alto
-          </p>
-          <p><img src="images/piano_roll_2_tenor.png" width="800" /><br>
-          Piano roll for Tenor
-          </p>
-          <p><img src="images/piano_roll_3_bass.png" width="800" /><br>
-          Piano roll for Bass
-          </p>
+      <p>To identify how parts in music21 p.parts correspond to the parts in my piece of music (i.e. in the MusicXML file), I had to consult with Copilot (documented at the bottom of this page).</p>
+      <p><b>Vocal parts:</b></p>
+
+      <figure class="figure mt-8">
+        <img src="images/piano_roll_0_soprano.png" class="img-fluid rounded-3" width="600" alt="Piano roll for Soprano">
+        <figcaption class="figure-caption">Piano roll for Soprano.</figcaption>
+      </figure>
+
+      <figure class="figure mt-8">
+        <img src="images/piano_roll_1_alto.png" class="img-fluid rounded-3" width="600" alt="Piano roll for Alto">
+        <figcaption class="figure-caption">Piano roll for Alto.</figcaption>
+      </figure>
+
+      <figure class="figure mt-8">
+        <img src="images/piano_roll_2_tenor.png" class="img-fluid rounded-3" width="600" alt="Piano roll for Tenor">
+        <figcaption class="figure-caption">Piano roll for Tenor.</figcaption>
+      </figure>
+      
+      <figure class="figure mt-8">
+        <img src="images/piano_roll_3_bass.png" class="img-fluid rounded-3" width="600" alt="Piano roll for Bass">
+        <figcaption class="figure-caption">Piano roll for Bass.</figcaption>
+      </figure>
           
-          <p><b>Piano parts:</b></p>
-          <p><img src="images/piano_roll_4_piano1.png" width="800" /><br>
-          Piano roll for Piano staff 1
-          </p>
-          <p><img src="images/piano_roll_5_piano2.png" width="800" /><br>
-          Piano roll for Piano staff 2
-          </p>
-          <p><img src="images/piano_roll_6_piano3.png" width="800" /><br>
-          Piano roll for Piano staff 3
-          </p>
+      <p><b>Piano parts:</b></p>
+
+      <figure class="figure mt-8">
+        <img src="images/piano_roll_4_piano1.png" class="img-fluid rounded-3" width="600" alt="Piano roll for Piano staff 1">
+        <figcaption class="figure-caption">Piano roll for Piano staff 1.</figcaption>
+      </figure>
+      
+      <figure class="figure mt-8">
+        <img src="images/piano_roll_5_piano2.png" class="img-fluid rounded-3" width="600" alt="Piano roll for Piano staff 2">
+        <figcaption class="figure-caption">Piano roll for Piano staff 2.</figcaption>
+      </figure>
+      
+      <figure class="figure mt-8">
+        <img src="images/piano_roll_6_piano3.png" class="img-fluid rounded-3" width="600" alt="Piano roll for Piano staff 3">
+        <figcaption class="figure-caption">Piano roll for Piano staff 3.</figcaption>
+      </figure>
+
           
       <div class="mt-12">    
         <h3>Pitch Histogram</h3>
       </div>
-          <p><img src="images/pitch_histogram.png" width="800" /></p>
-          
-          <p>Describe what new insights you have gained about your piece:</p>
+
+      <figure class="figure mt-8">
+        <img src="images/pitch_histogram.png" class="img-fluid rounded-3" width="600" alt="Pitch Histogram">
+        <figcaption class="figure-caption"></figcaption>
+      </figure>
+      
+      <blockquote class="blockquote">
+        <p>Describe what new insights you have gained about your piece:</p>
+      </blockquote>
 
 
-          <h2>AI Use</h2>
+      <div class="mt-12">
+        <h2>AI Use</h2>
+      </div>
 
       <table class="table">
         <thead>
