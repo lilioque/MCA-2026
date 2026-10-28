@@ -10,42 +10,75 @@
 
     <div class="container">
 
-      <h1><a href="/">MCA-2026: Carmina Burana by Carl Orff</a></h1>
+      <p class="fs-xl"><a href="/MCA-2026/">MCA-2026: Carmina Burana by Carl Orff</a></p>
       <hr />
       
       <p align="left"><a href="verovio.html">&lt;&lt; Week 3 (Verovio)</a></p>
-        <h1>Week 3. XML encoding for music notation (Reflection Part)</h1>
+        <div class="mt-12">
+          <h1>Week 3. XML encoding for music notation (Reflection Part)</h1>
+        </div>
         <p><b>Task 2:</b> <em>Compare 3 XML elements in the MusicXML file to the corresponding ones in MEI. ... Think about: which attributes can be employed in each standard, which parents and children can be used, and try to think of the implications of these differences.</em></p>
-        <p><b>Element 1: metadata about the music piece (title, author, etc.)</b></p>
+        
+        <div class="mt-12">
+          <h2>Element 1: metadata about the music piece (title, author, etc.)</h2>
+        </div>
         <p>Information about the piece title, composer, and part name is clearly labelled in the *.musicxml file through the use of the child elements of the element <code>&lt;credit&gt;</code> (<code>&lt;credit-type&gt;title&lt;/credit-type&gt;</code>, <code>&lt;credit-type&gt;composer&lt;/credit-type&gt;</code>, etc.), but in .mei they are just <code>&lt;rend&gt;</code> elements with the parent element <code>&lt;pgHead&gt;</code>. This is quite surprising, since the MEI standard is supposed to be more academic and research-oriented, but such basic information has been left unclassified. Moreover, the score that I digitised had the name of the composer given in two languages, and the second line, containing the name in Latin script, went into another element, <code>&lt;pgFoot&gt;</code>, and is not visible on the page rendered by Verovio. That also means that this metadata cannot be properly parsed from the *.mei file.</p>
-        <p><img src="images/musicxml_credits.png" width="400" /></p>
-        <p>Credits in *.musicxml</p>
-        <p><img src="images/mei_credits.png" width="400" /></p>
-        <p>Credits in *.mei</p>
-        <p><b>Element 2: Parts definition</b></p>
+        
+        <figure class="figure mt-8">
+          <img src="images/musicxml_credits.png" class="img-fluid rounded-3" width="600" alt="Credits in *.musicxml">
+          <figcaption class="figure-caption">Credits in *.musicxml.</figcaption>
+        </figure>
+
+        <figure class="figure mt-8">
+          <img src="images/mei_credits.png" class="img-fluid rounded-3" width="600" alt="Credits in *.mei">
+          <figcaption class="figure-caption">Credits in *.mei.</figcaption>
+        </figure>
+
+      
+        <div class="mt-12">
+          <h2>Element 2: Parts definition</h2>
+        </div>
         <p>Information about vocal parts and instruments presented in the score is encoded differently in these two standards. I will compare how the 'Soprano' voice is encoded in both of them.</p>
         <p>*.musicxml has a dedicated element <code>&lt;part-list>&gt;</code> the child <code>&lt;score-part id="P1"&gt;</code> of which contains nested elements related to Soprano (<code>&lt;instrument-name&gt;</code>, <code>&lt;instrument-sound&gt;</code> + info about MIDI realisation of this voice). *.mei encodes this information through the <code>&lt;staffDef&gt;</code> element, which has nested elements <code>&lt;label&gt;</code> (Soprano) as well as other important music data related to that part - clef, key signature and time signature (<code>&lt;clef&gt;</code>, <code>&lt;keySig&gt;</code>, and <code>&lt;meterSig&gt;</code>, respectively). *.musicxml holds this information in a separate element <code>&lt;part id="P1"&gt;</code> (which corresponds to <code>id="P1"</code> of a <code>&lt;score-part&gt;</code> element), among whose children are <code>&lt;key&gt;</code>, <code>&lt;time&gt;</code>, and <code>&lt;clef&gt;</code>.</p>
         <p>On the one hand, having this information inside one element, as in MEI, is convenient - this option is more human-readable. On the other hand, <em>O Fortuna</em> is a great example where clefs and time signatures change after the first few bars, so that is not some constant characteristic of a voice/instrument and there is its own logic of having that next to the relevant notes, not in the initial description of voices/instruments. </p>
-        <p><img src="images/musicxml_part_definition.png" width="400" /></p>
-        <p>Part definition in *.musicxml</p>
-        <p><img src="images/mei_part_definition.png" width="400" /></p>
-        <p>Part definition in *.mei</p>
-        <p><img src="images/musicxml_part_clef_key_time.png" width="400" /></p>
-        <p>Information about clef, key signature and time signature in *.musicxml</p>
+        
+        <figure class="figure mt-8">
+          <img src="images/musicxml_part_definition.png" class="img-fluid rounded-3" width="600" alt="Part definition in *.musicxml">
+          <figcaption class="figure-caption">Part definition in *.musicxml.</figcaption>
+        </figure>
+
+        <figure class="figure mt-8">
+          <img src="images/mei_part_definition.png" class="img-fluid rounded-3" width="600" alt="Part definition in *.mei">
+          <figcaption class="figure-caption">Part definition in *.mei.</figcaption>
+        </figure>
+        
+        <figure class="figure mt-8">
+          <img src="images/musicxml_part_clef_key_time.png" class="img-fluid rounded-3" width="600" alt="Information about clef, key signature and time signature in *.musicxml">
+          <figcaption class="figure-caption">Information about clef, key signature and time signature in *.musicxml.</figcaption>
+        </figure>
       
-        <p><b>Element 3: Chords, notes and associated lyrics</b></p>
+        
+        <div class="mt-12">
+          <h2>Element 3: Chords, notes and associated lyrics</h2>
+        </div>
         <p>Here I will compare how the notes associated with the 'For-' syllable of the lyrics and the corresponding chord in the first bar of the piece are represented in both standards.</p>
         <p>In MusicXML, the chord is represented as two successive <code>&lt;note&gt;</code> elements. Each element contains sub-elements describing pitch and duration, and contains information regarding the appearance of the note on the page (the stem is directed down). The first of the <code>&lt;note&gt;</code> elements also has a <code>&lt;lyric&gt;</code> sub-element with its own nested elements with syllabic position and the syllable itself. If we take this element alone, we have no means of determining that this note is part of a chord. The second note element, in turn, signifies that it belongs to a chord (it has a nested <code>&lt;chord/&gt;</code> element), but it does not provide any information about whether it has any associated lyrics. To find that out, we have to return to the previous note.</p>
         <p>MEI format is much more human-readable, as we have already seen. Separate notes are child elements of the parent <code>&lt;chord&gt;</code> element, and lyrics are given as yet another child element (<code>&lt;verse&gt;</code>).</p>
-        <p><img src="images/musescore_chords_lyrics.png" width="400" /></p>
-        <p>Syllable 'For-' in MuseScore 4 and the corresponding chord.</p>
+        
+        <figure class="figure mt-8">
+          <img src="images/musescore_chords_lyrics.png" class="img-fluid rounded-3" width="600" alt="Syllable 'For-' in MuseScore 4 and the corresponding chord">
+          <figcaption class="figure-caption">Syllable 'For-' in MuseScore 4 and the corresponding chord.</figcaption>
+        </figure>
     
-        <p><img src="images/musicxml_chords_lyrics.png" width="400" /></p>
-        <p>Syllable 'For-' in MusicXML and the corresponding chord.</p>
+        <figure class="figure mt-8">
+          <img src="images/musicxml_chords_lyrics.png" class="img-fluid rounded-3" width="600" alt="Syllable 'For-' in MusicXML and the corresponding chord">
+          <figcaption class="figure-caption">Syllable 'For-' in MusicXML and the corresponding chord.</figcaption>
+        </figure>
 
-        <p><img src="images/mei_chords_lyrics.png" width="400" /></p>
-        <p>Syllable 'For-' in MEI and the corresponding chord.</p>
-
+        <figure class="figure mt-8">
+          <img src="images/mei_chords_lyrics.png" class="img-fluid rounded-3" width="600" alt="Syllable 'For-' in MEI and the corresponding chord">
+          <figcaption class="figure-caption">Syllable 'For-' in MEI and the corresponding chord.</figcaption>
+        </figure>
         
 
       <p>If we bring this all together, it seems that the MEI standard is designed to be very 'user-friendly' and human-readable, and reading a *.mei-file resembles reading a music score. On the other hand, if we are not gathering information for our research from XML manually (which is actually the reason for encoding music in a variety of XML standards), it is not such a big advantage. Elements in MusicXML, since they are not nested, are probably more convenient for an algorithmic analysis because they can be accessed one by one and not as a group.</p>
