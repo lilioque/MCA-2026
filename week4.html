@@ -1,5 +1,5 @@
 <html>
-<!--Version 4.0 -->
+<!--Version 5.0 -->
   <head>
     <title>Carmina Burana by Carl Orff, Week 4</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -73,6 +73,32 @@
           <p><img src="images/pitch_histogram.png" width="800" /></p>
           
           <p>Describe what new insights you have gained about your piece:</p>
+
+
+          <h2>AI Use</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">AI Tool</th>
+            <th scope="col">Prompt</th>
+            <th scope="col">Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">14 October 2026</th>
+            <td>Microsoft 365 Copilot</td>
+            <td>In music21, how do the part indices in the parsed data from musicxml correspond to the parts in musicxml itself? I have 5 parts in musicxml and p.parts ranging from p.parts[0] to p.parts[6].</td>
+            <td>
+              <p>I added the following code to my Jupyter Notebook to print out the correspondence between the parts:</p>
+              <p><code>for i, part in enumerate(p.parts):<br>
+    &nbsp;&nbsp;print(i, part.id, part.partName)</code></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
 
           <p align="right"><a href="week5.html">Week 5 &gt;&gt;</a></p>
