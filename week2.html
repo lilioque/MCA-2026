@@ -1,5 +1,5 @@
 <html>
-<!--Version 5.1 -->
+<!--Version 6.0 -->
   <head>
     <title>Carmina Burana by Carl Orff, Week 2</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -14,10 +14,14 @@
     
       <h1>Week 2. Digitising <em>O Fortuna</em>'s music score in MuseScore 4</h1>
       <p>Link to the MuseScore 4 file: <a href="data/o_fortuna.mscz">o_fortuna.mscz</a></p>
-      <p><b>Task:</b></p>
-      <p>For those who use Audiveris, discuss the aspects of your score that were not transcribed properly by the OMR engine.</p>
-      <p>For those who transcribe from scratch, discuss your experience transcribing the music. What aspects of MuseScore were intuitive and worked well? What aspects were challenging?
-      </p>
+
+      <blockquote class="blockquote">
+        <p><b>Task:</b></p>
+        <p>For those who use Audiveris, discuss the aspects of your score that were not transcribed properly by the OMR engine.</p>
+        <p>For those who transcribe from scratch, discuss your experience transcribing the music. What aspects of MuseScore were intuitive and worked well? What aspects were challenging?
+        </p>        
+      </blockquote>
+      
       
       <p><b>Reflection:</b></p>
       <p>At first, I attempted to do OMR of the <em>O Fortuna</em> score in Audiveris. As can be seen in the screenshots below, the result was very disappointing: Audiveris failed to recognise voices, time signatures and even lyrics among the most obvious failures. Probably there was a way to attune the Audiveris settings to this particular image, but I decided that considering the complexity of the score (at least for my very basic knowledge of music theory and notation), it would be easier to transcribe from scratch than to try and catch all the mistakes made by Audiveris.</p>
@@ -29,15 +33,61 @@
       </ul>
       <p>The greatest challenge for me was adding 'Laissez Vibrer' signs. That is where I wished I could have asked a trained musician for some help. Gemini helped me to resolve that issue (I specifically asked what those signs can be in O Fortuna; see the AI use document), but I think MuseScore would benefit from an option of just drawing something and having it suggest some possible options (though maybe that is possible in the paid version?).</p>
       <p>In general, I think that MuseScore provides great UI/UX, and if I had to use it for digitising manuscripts on a regular basis, I would be able to do that even with my initially limited musical knowledge (and I do find that I learned something about music notation through this exercise).</p>
+
+      <figure class="figure">
+        <img src="images/o_fortuna_omr_scrsht.png" class="img-fluid rounded-3" alt="OMR result in Audiveris">
+        <figcaption class="figure-caption">OMR result in Audiveris.</figcaption>
+      </figure>
+
+      <figure class="figure">
+        <img src="images/o_fortuna_omr_musescore_scrsht.png" class="img-fluid rounded-3" alt="Audiveris result, opened in MuseScore 4">
+        <figcaption class="figure-caption">Audiveris result, opened in MuseScore 4, in comparison with the PDF I was digitising.</figcaption>
+      </figure>
   
-      <img src="images/o_fortuna_omr_scrsht.png" width="900">
-      <p>OMR result in Audiveris.</p>
-  
-      <img src="images/o_fortuna_omr_musescore_scrsht.png" width="900">
-      <p>Audiveris result, opened in MuseScore 4, in comparison with the PDF I was digitising.</p>
-  
-      <img src="images/o_fortuna_musescore_scrnsht.png" width="900">
-      <p>My manually transcribed score in MuseScore 4.</p>
+      <figure class="figure">
+        <img src="images/o_fortuna_musescore_scrnsht.png" class="img-fluid rounded-3" alt="My manually transcribed score">
+        <figcaption class="figure-caption">My manually transcribed score in MuseScore 4.</figcaption>
+      </figure>
+
+
+      <h2>AI Use</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">AI Tool</th>
+            <th scope="col">Prompt</th>
+            <th scope="col">Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">30 September 2026</th>
+            <td>Google AI (via Google Search)</td>
+            <td>musescore 4 add a breath mark</td>
+            <td>I enabled a 'Breaths and pauses' palette in the list of palettes, which allowed me to add breath marks.</td>
+          </tr>
+          <tr>
+            <th scope="row">30 September 2026</th>
+            <td>Google AI (via Google Search)</td>
+            <td>musescore 4 add tempo marking to the second instrument</td>
+            <td>I used Staff Text for the second tempo marking.</td>
+          </tr>
+          <tr>
+            <th scope="row">30 September 2026</th>
+            <td>Google AI (via Google Search)</td>
+            <td>musescore 4 show a page number on the first page</td>
+            <td>I followed the instructions to add a page number through the Format menu.</td>
+          </tr>
+          <tr>
+            <th scope="row">30 September 2026</th>
+            <td>Google Gemini</td>
+            <td>I have a 'tie' in the music notation for 'O Fortuna' by Carl Orff that seems to change the notes' duration. What could it be?</td>
+            <td>I discovered the existence of "Laissez Vibrer" and how to add it to a music notation in MuseScore 4.</td>
+          </tr>
+        </tbody>
+      </table>
   
       <p align="right"><a href="verovio.html">Week 3 (Verovio) &gt;&gt;</a></p>
       
