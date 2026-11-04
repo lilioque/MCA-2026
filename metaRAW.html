@@ -1,16 +1,25 @@
 <html>
-  <!--Version 2.2-->
+  <!--Version 3.0-->
 <head>
-  <title>My Piece</title>
+  <title>Raw metadata for O Fortuna MEI file</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/myMeta.css" media="all" />
   <link rel="stylesheet" href="css/style.css" media="all" />
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <script src="js/CETEI.js"></script>
 </head>
 <body>
+  <div class="container">
+      <p class="fs-xl"><a href="/MCA-2026/">MCA-2026: Carmina Burana by Carl Orff</a></p>
+      <hr />
+      <p><a href="week7.html">&lt;&lt; Week 7</a></p>
+  </div>
   <div id="MEImeta"></div>
   <div id="app" class="panel" style="border: 1px solid light gray; min-height: 800px;">Verovio is loading...</div>
-  <div><p>[Discuss how you would format your metadata here]</p></div>
+  <div class="container">
+    <p>The main issue with the current metadata representation is that it lacks line breaks and field names. The easiest fix is to put each field on its own line and label it with its name before the value. The next step is to add the section names (e.g. File Description, Publication Statement, etc.) and indent the field name/field value pairs to get the "nested" look. Actually, it is what is being done within the MEI file itself! With the current type of formatting, the MEI file is more "human-readable" than the raw output of this JS function.</p>
+    <!--p align="right"><a href="week8.html">Week 8 &gt;&gt;</a></p-->
+  </div>
   <script type="module">
       import 'https://www.verovio.org/javascript/app/verovio-app.js';
         const app = new Verovio.App(document.getElementById("app"), {});
