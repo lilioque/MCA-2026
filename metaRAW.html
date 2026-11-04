@@ -1,5 +1,5 @@
 <html>
-  <!--Version 2.0-->
+  <!--Version 2.1-->
 <head>
   <title>My Piece</title>
   <meta charset="utf-8">
@@ -37,7 +37,7 @@
         mei: "http://www.music-encoding.org/ns/mei"
       }
     })
-    CETEI4MEI.getHTML5("data/example2.mei", function(data) {
+    CETEI4MEI.getHTML5("data/o_fortuna_with_header2.mei", function(data) {
       // get header
       var meiHead = data.querySelector('mei-meiHead')
       document.getElementById("MEImeta").appendChild(meiHead)
